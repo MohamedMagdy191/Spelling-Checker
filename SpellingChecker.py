@@ -41,7 +41,7 @@ class SpellingChecker:
                 keys.append(word)
         return keys
 
-    def neighbours(self, key):
+    def nearest_four_words(self, key):
 
         keys = []  # list of the nearest words to the key
         nearest4 = []  # the target list which will contain the nearst 4 words to the key
@@ -73,3 +73,9 @@ class SpellingChecker:
             self.dictionary.append(word)
             self.dictionary = sorted(self.dictionary)
             print("the word ({}) was added seccessfully".format(word))
+            
+    def export_dictionary(self,out_path): # the out path in form of '/---/----/file_name.txt'
+        with open(out_path, 'w') as output:
+            for row in self.dictionary:
+                output.write(str(row) + '\n')
+        print("Done")
