@@ -4,18 +4,22 @@ path = 'dictionary.txt'
 
 spell = SpellingChecker(path)
 
-print(spell.neighbours("word"))
+print(spell.nearest_words("animal"))
 
-print(spell.neighbours("animaal"))
+print(spell.nearest_four_words("word"))
 
-print(spell.neighbours("animel"))
+print(spell.nearest_four_words("animaal"))
 
-print(spell.neighbours("angri"))
+print(spell.nearest_four_words("animel"))
+
+print(spell.nearest_four_words("angri"))
 
 spell.add_word("animal")
 
-print(spell.neighbours("animeel"))
+print(spell.nearest_four_words("animeel"))
 
 spell.add_word("animeel")
 
-print(spell.neighbours("animeel"))
+print(spell.nearest_four_words("animeel"))
+
+spell.export_dictionary("edited_dictionary.txt")
