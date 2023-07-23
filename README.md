@@ -14,7 +14,7 @@ The class has five main operations:
 4. It takes an input word and add this word to the dictionary if it is not allready in the dictionary.
   `spell.add_word(word)`
 5. It takes a path of (file.txt) and exports the edited dictionary if any updates are done.
-    `spell.export_dictionary(word)`
+    `spell.export_dictionary(path)`
 
 ### Requirements:
 * regex
